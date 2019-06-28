@@ -34,7 +34,7 @@ def seconds():
 
 while True:
     for event in longpoll.listen():
-        if(minutes()%1==0):
+        if(minutes()%5==0):
             #vk_session.method('wall.post', {'owner_id': '-137821135','message': "#6server\n Продам Cadillac CTV. Гос: 5.57кк, цена договорная, в лс.","attachments": 'photo100172_166443618'})
             #post=364397
             #vk_session.method('wall.delete', {'owner_id': '-163915966','post_id': str(post)})
