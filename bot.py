@@ -1,5 +1,4 @@
-#import sys
-#sys.path.insert(0, '../')
+
 
 from vk_api.longpoll import VkLongPoll, VkEventType
 from vk_api.keyboard import VkKeyboard, VkKeyboardColor
@@ -11,8 +10,6 @@ import os
 token = os.environ.get('TOKEN')
 vk_session = vk_api.VkApi( token=token)
 
-
-a=1
 
 session_api = vk_session.get_api()
 
@@ -34,10 +31,7 @@ def seconds():
 
 while True:
     for event in longpoll.listen():
-        if(minutes()%5==0):
-            #vk_session.method('wall.post', {'owner_id': '-137821135','message': "#6server\n Продам Cadillac CTV. Гос: 5.57кк, цена договорная, в лс.","attachments": 'photo100172_166443618'})
-            #post=364397
-            #vk_session.method('wall.delete', {'owner_id': '-163915966','post_id': str(post)})
+        if(minutes()%5==0):    
             mastmp=vk_session.method('wall.get', {'owner_id': '-163915966','count': 20})
             x=len(mastmp["items"])
             for i in range (0,x):
@@ -51,14 +45,5 @@ while True:
                     print(mastmp2["items"][i]['id'])
                     vk_session.method('wall.delete', {'owner_id': '-137821135','post_id': str(mastmp2["items"][i]['id'])})
             vk_session.method('wall.post', {'owner_id': '-163915966','message': "#2server⛔⛔⛔⛔⛔⛔⛔⛔⛔\nПродам дом в Горной! Гос: 900к!\nДоплата договорная, в лс.",'attachment':'photo-177844818_456239077'})
-            #vk_session.method('wall.post', {'owner_id': '-137821135','message': "#1server\n Продам Subaru WRX на 108 тонере и ВАЗ 2107 на 108 тонере и старых темно-синих фарах. \nЦена договорная, в лс.\n#2server. Продам коттедж в Жуковском, второй от ЖТУ. Гос: 1.1кк, дп договорная, в лс.\n #6server.\nПродам BMW 750 I. Гос: 1.449кк, без номеров, новая! Цена в лс!"})
             time.sleep(60)
-            #print("good!")
-            #vk_session.method('wall.post', {'owner_id': '-163915966','message': "#1server\n Продам Subaru WRX на 108 тонере, которого сейчас уже нет, и старых темно-синих фарах. \nЦена договорная, в лс."})
-            #vk_session.method('wall.post', {'owner_id': '-137821135','message': "#1server\n Продам Subaru WRX на 108 тонере, которого сейчас уже нет, и старых темно-синих фарах. \nЦена договорная, в лс."})
             
-    if(minutes()%20==0):
-        print("ne good!")
-        #vk_session.method('wall.post', {'owner_id': '-163915966','message': "#6server\n Продам Mercedes E63 (ешку). Гос: 5.94кк, цена договорная, в лс.","attachments":'photo100172_166443618'})
-        #vk_session.method('wall.post', {'owner_id': '-137821135','message': "#6server\n Продам Cadillac CTV. Гос: 5.57кк, цена договорная, в лс.","attachments": 'photo100172_166443618'})
-        #time.sleep(60)
