@@ -1,3 +1,4 @@
 vk_api
-pypyodbc
-mysql.connector
+websockets
+chardet
+aiohttp
