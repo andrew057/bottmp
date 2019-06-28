@@ -7,9 +7,9 @@ import vk_api
 import datetime
 import random
 import time
-
-#login, password='89165775463','helloend111'
-vk_session = vk_api.VkApi( token="54ef672458b301255e5da023c15ae9ace2e462b2b05817815527a45c7b8a0dfd6e1e90c04e604a32f60e4")
+import os
+token = os.environ.get('TOKEN')
+vk_session = vk_api.VkApi( token=token)
 
 
 a=1
