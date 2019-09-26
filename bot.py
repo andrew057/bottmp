@@ -31,7 +31,7 @@ def seconds():
 
 while True:
     for event in longpoll.listen():
-        if(minutes()%5==0):    
+        if(minutes()%60==0):    
             mastmp=vk_session.method('wall.get', {'owner_id': '-163915966','count': 20})
             x=len(mastmp["items"])
             for i in range (0,x):
@@ -44,6 +44,6 @@ while True:
                 if(str(mastmp2["items"][i]['from_id'])=='414517334'):
                     print(mastmp2["items"][i]['id'])
                     vk_session.method('wall.delete', {'owner_id': '-137821135','post_id': str(mastmp2["items"][i]['id'])})
-            vk_session.method('wall.post', {'owner_id': '-163915966','message': "#1server.\nРассматриваю предложения на автомобиль. Тонер старый - 108%.","attachment":"photo-177844818_457239078"})
+            vk_session.method('wall.post', {'owner_id': '-163915966','message': "#1server.\nРассматриваю предложения на автомобиль. Тонер старый - 108%.\n#6server. Рассматриваю предложения на номер Х000ХХ (2500 в донате) и АЗС около армии (гос: 20кк).","attachment":"photo414517334_457242989"})
             time.sleep(60)
             
