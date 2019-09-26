@@ -31,7 +31,7 @@ def seconds():
 
 while True:
     for event in longpoll.listen():
-        if(minutes()%60==0):    
+        if(minutes()%31==0):    
             mastmp=vk_session.method('wall.get', {'owner_id': '-163915966','count': 20})
             x=len(mastmp["items"])
             for i in range (0,x):
