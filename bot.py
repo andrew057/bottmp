@@ -44,6 +44,6 @@ while True:
                 if(str(mastmp2["items"][i]['from_id'])=='414517334'):
                     print(mastmp2["items"][i]['id'])
                     vk_session.method('wall.delete', {'owner_id': '-137821135','post_id': str(mastmp2["items"][i]['id'])})
-            vk_session.method('wall.post', {'owner_id': '-163915966','message': "#1server. Продам дом в Волчанске.\nГос:801к, ДП в ЛС.\n#6server. Продам номер Х000ХХ (2500 в донате).\nЦены в лс.","attachment":""})
+            vk_session.method('wall.post', {'owner_id': '-163915966','message': "#1server. Продам следующие экслюзивные авто:\n- ✅Стингер на желтом 108 тонере. Такое количество и цвет поставить нельзя. На сервере 2 таких автомобиля.\n- ‼Майбах, 108 тонер\n- ✅БМВ М5 Е60 на старых темно-синих фарах.\nЦены договорные, в ЛС.\n#6server. Продам номера Х000ХХ, в донате 2.5к, цена: 35кк, небольшой торг.","attachment":""})
             time.sleep(60)
             
