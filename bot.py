@@ -44,6 +44,6 @@ while True:
                 if(str(mastmp2["items"][i]['from_id'])=='414517334'):
                     print(mastmp2["items"][i]['id'])
                     vk_session.method('wall.delete', {'owner_id': '-137821135','post_id': str(mastmp2["items"][i]['id'])})
-            vk_session.method('wall.post', {'owner_id': '-163915966','message': "#1server. Продам следующее экслюзивное авто:\n- ✅БМВ М5 Е60 на старых темно-синих фарах.\nЦена договорная, в ЛС.\n#6server. Продам номера Х000ХХ, в донате 2.5к, цена: 35кк, небольшой торг.","attachment":""})
+            vk_session.method('wall.post', {'owner_id': '-163915966','message': "#1server. Продам следующее экслюзивное авто:\n- ✅БМВ М5 Е60 на старых темно-синих фарах.\nЦена договорная, в ЛС.\n","attachment":""})
             time.sleep(60)
             
